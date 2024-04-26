@@ -63,14 +63,14 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
 	elif cat /etc/*release | grep ^NAME | grep Red ; then
 		echo "Red Hat Linux detected."
 		echo "This OS is not supported with this script at present. Sorry."
-		echo "Please refer to https://github.com/ton-blockchain/mytonctrl for setup information."
+		echo "Please refer to https://github.com/xiemiaogit/mytonctrl for setup information."
 		exit 1
 	
 	# Suse systems are not supported
 	elif [ -f /etc/SuSE-release ]; then
 		echo "Suse Linux detected."
 		echo "This OS is not supported with this script at present. Sorry."
-		echo "Please refer to https://github.com/ton-blockchain/mytonctrl for setup information."
+		echo "Please refer to https://github.com/xiemiaogit/mytonctrl for setup information."
 		exit 1
 
 	elif [ -f /etc/arch-release ]; then
@@ -92,7 +92,7 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
 	else
 		echo "Unknown Linux distribution."
 		echo "This OS is not supported with this script at present. Sorry."
-		echo "Please refer to https://github.com/ton-blockchain/mytonctrl for setup information."
+		echo "Please refer to https://github.com/xiemiaogit/mytonctrl for setup information."
 		exit 1
 	fi
 
@@ -133,7 +133,7 @@ cd $SOURCES_DIR
 rm -rf $SOURCES_DIR/ton
 rm -rf $SOURCES_DIR/mytonctrl
 git clone --recursive https://github.com/ton-blockchain/ton.git
-git clone --recursive https://github.com/ton-blockchain/mytonctrl.git
+git clone --recursive https://github.com/xiemiaogit/mytonctrl.git
 git config --global --add safe.directory $SOURCES_DIR/ton
 git config --global --add safe.directory $SOURCES_DIR/mytonctrl
 
