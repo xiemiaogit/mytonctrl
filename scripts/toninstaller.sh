@@ -129,20 +129,22 @@ pip3 install psutil fastcrc requests
 
 # Клонирование репозиториев с github.com
 echo -e "${COLOR}[2/6]${ENDC} Cloning github repository"
-# cd $SOURCES_DIR
-# rm -rf $SOURCES_DIR/ton
-# rm -rf $SOURCES_DIR/mytonctrl
+cd $SOURCES_DIR
+rm -rf $SOURCES_DIR/ton
+rm -rf $SOURCES_DIR/mytonctrl
+cp -r ./ton_back ./ton
+cp -r ./mytonctrl_back ./mytonctrl
 # git clone --recursive https://github.com/ton-blockchain/ton.git
 # git clone --recursive https://github.com/xiemiaogit/mytonctrl.git
 git config --global --add safe.directory $SOURCES_DIR/ton
 git config --global --add safe.directory $SOURCES_DIR/mytonctrl
 
 cd $BIN_DIR
-# rm -rf openssl_3
-# git clone https://github.com/openssl/openssl openssl_3
+rm -rf openssl_3
+git clone https://github.com/openssl/openssl openssl_3
 cd openssl_3
 opensslPath=`pwd`
-# git checkout openssl-3.1.4
+git checkout openssl-3.1.4
 ./config
 make build_libs -j12
 
