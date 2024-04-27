@@ -26,7 +26,7 @@ rm -rf /etc/systemd/system/dht-server.service
 systemctl daemon-reload
 
 # Удаление файлов
-rm -rf /usr/src/ton
+# rm -rf /usr/src/ton
 rm -rf /usr/src/mytonctrl
 rm -rf /usr/bin/ton
 rm -rf /var/ton-work
