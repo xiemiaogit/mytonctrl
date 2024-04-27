@@ -132,8 +132,8 @@ echo -e "${COLOR}[2/6]${ENDC} Cloning github repository"
 cd $SOURCES_DIR
 rm -rf $SOURCES_DIR/ton
 rm -rf $SOURCES_DIR/mytonctrl
-cp -r $SOURCES_DIR/ton_back $SOURCES_DIR/ton
-cp -r $SOURCES_DIR/mytonctrl_back $SOURCES_DIR/mytonctrl
+cp -r $SOURCES_DIR/ton_bak $SOURCES_DIR/ton
+cp -r $SOURCES_DIR/mytonctrl_bak $SOURCES_DIR/mytonctrl
 # git clone --recursive https://github.com/ton-blockchain/ton.git
 # git clone --recursive https://github.com/xiemiaogit/mytonctrl.git
 git config --global --add safe.directory $SOURCES_DIR/ton
