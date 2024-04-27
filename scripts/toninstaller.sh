@@ -83,11 +83,11 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
 
 	elif [ -f /etc/debian_version ]; then
 		echo "Ubuntu/Debian Linux detected."
-		apt-get update
-		apt-get install -y build-essential git cmake clang libgflags-dev zlib1g-dev libssl-dev libreadline-dev libmicrohttpd-dev pkg-config libgsl-dev python3 python3-dev python3-pip libsecp256k1-dev libsodium-dev liblz4-dev
+		# apt-get update
+		# apt-get install -y build-essential git cmake clang libgflags-dev zlib1g-dev libssl-dev libreadline-dev libmicrohttpd-dev pkg-config libgsl-dev python3 python3-dev python3-pip libsecp256k1-dev libsodium-dev liblz4-dev
 
 		# Install ninja
-		apt-get install -y ninja-build
+		# apt-get install -y ninja-build
 
 	else
 		echo "Unknown Linux distribution."
@@ -140,11 +140,11 @@ git config --global --add safe.directory $SOURCES_DIR/mytonctrl
 cd $BIN_DIR
 # rm -rf openssl_3
 # git clone https://github.com/openssl/openssl openssl_3
-# cd openssl_3
-# opensslPath=`pwd`
+cd openssl_3
+opensslPath=`pwd`
 # git checkout openssl-3.1.4
-# ./config
-# make build_libs -j12
+./config
+make build_libs -j12
 
 # Подготавливаем папки для компиляции
 echo -e "${COLOR}[3/6]${ENDC} Preparing for compilation"
