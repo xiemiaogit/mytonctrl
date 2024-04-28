@@ -322,7 +322,7 @@ def DownloadDump():
 		return
 	#end if
 
-	apt install
+	# apt install
 	cmd = "apt install plzip pv -y"
 	os.system(cmd)
 
