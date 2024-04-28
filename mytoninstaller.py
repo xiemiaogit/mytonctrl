@@ -322,13 +322,13 @@ def DownloadDump():
 		return
 	#end if
 
-	# apt install
-	# cmd = "apt install plzip pv -y"
-	# os.system(cmd)
+	apt install
+	cmd = "apt install plzip pv -y"
+	os.system(cmd)
 
-	# download dump
-	# cmd = "curl -Ls {url}/dumps/latest.tar.lz | pv | plzip -d -n8 | tar -xC /var/ton-work/db".format(url=url)
-	cmd = "tar -xvf /app/ton/latest.tar.lz -C /var/ton-work/db"
+	download dump
+	cmd = "curl -Ls {url}/dumps/latest.tar.lz | pv | plzip -d -n8 | tar -xC /var/ton-work/db".format(url=url)
+	# cmd = "tar -xvf /app/ton/latest.tar.lz -C /var/ton-work/db"
 	os.system(cmd)
 #end define
 
